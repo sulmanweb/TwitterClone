@@ -4,4 +4,6 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable,
          :confirmable
   include DeviseTokenAuth::Concerns::User
+
+  validates_uniqueness_of :username
 end
